@@ -1,0 +1,45 @@
+<odoo>
+    <menuitem
+        id="real_estate_root_menu"
+        name="Real estate"
+        sequence="10"
+        web_icon="app_one,static\description\icon.png"
+    />
+
+    <menuitem
+        id="properties_menu"
+        name="Properties"
+        parent="real_estate_root_menu"
+        action="property_action"
+        sequence="1"
+    />
+
+    <menuitem
+        id="agent_menu"
+        name="Agents"
+        parent="real_estate_root_menu"
+        action="agent_action"
+        sequence="2"
+    />
+    <menuitem id="configuration_menu"
+          name="Configuration"
+          parent="real_estate_root_menu"
+          sequence="3"/>
+
+      <menuitem
+        id="owner_menu"
+        name="owner"
+        parent="configuration_menu"
+        action="owner_action"
+        sequence="1"
+    />
+       <menuitem
+        id="tag_menu"
+        name="tag"
+        parent="configuration_menu"
+        action="tag_action"
+        sequence="2"
+    />
+
+
+</odoo>
