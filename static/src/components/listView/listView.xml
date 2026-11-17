@@ -2,6 +2,29 @@
 
 <templates xml:space="preserve">
     <t t-name="app_one.ListView">
-        <h1>hello world</h1>
+        <div class="app_one_list">
+            <h1 class="app_one_title">Properties</h1>
+
+            <div class="app_one_table_wrapper">
+                <table class="app_one_table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Postcode</th>
+                            <th>Date availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="state.records" t-as="record" t-key="record.id">
+                        <tr>
+                            <td><t t-esc="record.name"/></td>
+                            <td><t t-esc="record.postcode"/></td>
+                            <td><t t-esc="record.date_available"/></td>
+                        </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </t>
 </templates>

@@ -1,0 +1,82 @@
+.app_one_list {
+    padding: 24px;
+    background: #f5f7fa;
+    height: 100%;          /* بدل min-height */
+    overflow-y: auto;      /* ده اللي بيفعّل السكرول */
+    box-sizing: border-box;
+}
+
+.app_one_title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.app_one_table_wrapper {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.app_one_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #374151;
+}
+
+.app_one_table thead {
+    background: #714b67; /* لون أودوو الأساسي، غيره براحتك */
+}
+
+.app_one_table th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.app_one_table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.app_one_table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.app_one_table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.app_one_table tbody tr:hover {
+    background: #f3e8f1;
+    cursor: pointer;
+}
+
+.app_one_table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.app_one_badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.app_one_badge_success { background: #d1fae5; color: #065f46; }
+.app_one_badge_warning { background: #fef3c7; color: #92400e; }
+.app_one_badge_danger  { background: #fee2e2; color: #991b1b; }
+
+/* RTL لو الواجهة عربي */
+[dir="rtl"] .app_one_table th {
+    text-align: right;
+}

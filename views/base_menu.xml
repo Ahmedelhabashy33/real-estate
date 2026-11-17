@@ -2,7 +2,7 @@
     <menuitem
         id="real_estate_root_menu"
         name="Real estate"
-        sequence="10"
+        sequence="1"
         web_icon="app_one,static\description\icon.png"
     />
 
