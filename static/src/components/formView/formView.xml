@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="app_one.FormView">
+        <div class="app_one_form">
+            <h3 class="app_one_form_title">New Property</h3>
+
+            <div class="app_one_form_group">
+                <label class="app_one_form_label" for="prop_name">Name</label>
+                <input id="prop_name" class="app_one_form_input" t-model="state.name"
+                       placeholder="Enter property name"/>
+            </div>
+
+            <div class="app_one_form_group">
+                <label class="app_one_form_label" for="prop_postcode">Postcode</label>
+                <input id="prop_postcode" class="app_one_form_input" t-model="state.postcode"
+                       placeholder="Enter property postcode"/>
+            </div>
+
+            <div class="app_one_form_group">
+                <label class="app_one_form_label" for="prop_date">Date Available</label>
+                <input id="prop_date" class="app_one_form_input" type="date"
+                       t-model="state.date_available"/>
+            </div>
+
+            <div class="app_one_form_footer">
+                <button class="btn btn-primary app_one_btn" t-on-click="createRecord">Save</button>
+                <button class="btn btn-secondary app_one_btn" t-on-click="cancel">Cancel</button>
+            </div>
+        </div>
+    </t>
+</templates>

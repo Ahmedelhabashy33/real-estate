@@ -4,6 +4,16 @@
     <t t-name="app_one.ListView">
         <div class="app_one_list">
             <h1 class="app_one_title">Properties</h1>
+            <button class="btn btn-primary p-1 m-1" t-on-click="toggleCreateForm">
+                <t t-if="state.showCreateForm">Close</t>
+                <t t-else="">New</t>
+
+
+            </button>
+
+            <t t-if="state.showCreateForm">
+                <FormView onRecordCreated="onRecordCreated" onCancel="toggleCreateForm.bind(this)"/>
+            </t>
 
             <div class="app_one_table_wrapper">
                 <table class="app_one_table">
@@ -12,6 +22,7 @@
                             <th>Name</th>
                             <th>Postcode</th>
                             <th>Date availability</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,6 +31,7 @@
                             <td><t t-esc="record.name"/></td>
                             <td><t t-esc="record.postcode"/></td>
                             <td><t t-esc="record.date_available"/></td>
+                            <td><button class="btn btn-danger" t-on-click="deleteRecord.bind(this,record.id)">Delete</button></td>
                         </tr>
                         </t>
                     </tbody>
